@@ -9,7 +9,10 @@ Author URI: https://fin-law.de/
   --hover-color: #A8D4B1;
   --fluid-18-32: clamp(18px, 12px + 1.7073vw, 32px);
   --fluid-16-32: clamp(16px, 9px + 1.9512vw, 32px);
+  --fluid-32-64: clamp(32px, 17px + 3.9024vw, 64px);
+  --fluid-64-120: clamp(64px, 38.0488px + 6.8293vw, 120px);
   --bg-dark: #050B15;
+  --bg-light-dark: #121721;
 }
 
 *,
@@ -51,6 +54,11 @@ button {
 }
 
 body {
+  font-family: Outfit, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
   color: var(--white-color);
   background-color: var(--bg-dark);
   scroll-behavior: smooth;
@@ -64,6 +72,16 @@ body.locked {
   max-width: 1264px;
   padding-inline: var(--fluid-18-32);
   margin-inline: auto;
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.site-main {
+  flex: 1 1 auto;
 }
 
 /* ================ header start ===================== */
@@ -340,7 +358,7 @@ body.locked {
   display: none;
   padding: 16px;
   list-style: none;
-  background-color: rgb(255 255 255 / 5%);
+  background-color: var(--bg-light-dark);
   border: 1px solid rgb(255 255 255 / 10%);
   border-radius: 12px;
 }
@@ -361,6 +379,232 @@ body.locked {
 }
 
 /* ================ header end ===================== */
+
+/* ================ footer start ===================== */
+.site-footer {
+  padding-top: var(--fluid-64-120);
+  padding-bottom: var(--fluid-32-64);
+}
+
+.site-footer .menu-item a {
+  font-family: Outfit, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  color: var(--white-color);
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.site-footer .menu-item a:hover {
+  color: var(--hover-color);
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--fluid-32-64);
+}
+
+.footer-row1 {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.splide__arrows {
+  position: absolute;
+  bottom: -164px;
+  left: 0;
+  display: flex;
+  gap: 16px;
+}
+
+.splide__arrow {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  background-color: var(--white-color);
+  opacity: 1;
+}
+
+.splide__arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+.splide__slide__row {
+  height: auto !important;
+}
+
+.splide__arrow--prev {
+  left: initial;
+}
+
+.splide__arrow--next {
+  right: initial;
+}
+
+.footer-services-menu-list, .footer-services-submenu-list {
+  list-style: none;
+}
+
+.footer-services-submenu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.footer-services-menu-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-bottom: 16px;
+}
+
+.footer-services-menu-link {
+  font-family: Outfit, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 140%; /* 19.6px */
+  color: #2A3142;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.footer-services-menu-link:hover {
+  color: var(--white-color);
+}
+
+.footer-services-submenu-link {
+  font-family: Hind, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+  color: var(--white-color);
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.footer-services-submenu-link:hover {
+  color: var(--hover-color);
+}
+
+.footer-linkedin:hover path {
+  fill: var(--hover-color);
+  transition-duration: 0.3s;
+}
+
+.top-footer-menu,
+.main-footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px var(--fluid-16-32);
+  align-items: center;
+  list-style: none;
+}
+
+.footer-line {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255 255 255/ 10%);
+}
+
+.footer-subscribe-wrapper {
+  width: 100%;
+  max-width: 420px;
+  margin-left: auto;
+}
+
+.form-wrapper {
+  position: relative;
+}
+
+.form-wrapper .wpcf7-not-valid-tip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.footer-subscribe-wrapper label,
+.footer-subscribe-wrapper .wpcf7-form-control-wrap {
+  display: block;
+}
+
+.footer-subscribe-wrapper .wpcf7-email {
+  width: 100%;
+  height: 56px;
+  padding: 6px 6px 6px 24px;
+  font-family: Outfit, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 140%; /* 19.6px */
+  color: var(--white-color);
+  background-color: rgb(255 255 255 / 5%);
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 100px;
+}
+
+.footer-subscribe-wrapper .wpcf7-email::placeholder {
+  font-family: Outfit, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 140%; /* 19.6px */
+  color: var(--white-color);
+}
+
+.footer-subscribe-wrapper .wpcf7-email:focus {
+  outline-color: var(--hover-color);
+}
+
+.footer-subscribe-wrapper button {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 10px 10px 24px;
+  font-family: Outfit, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  font-variant-numeric: lining-nums proportional-nums;
+  line-height: 140%; /* 19.6px */
+  color: var(--bg-dark);
+  background: #FFF;
+  border-radius: 100px;
+  transition-duration: 0.3s;
+  transform: translateY(-50%);
+}
+
+.footer-subscribe-wrapper button:hover {
+  background-color: var(--hover-color);
+}
+
+.footer-subscribe-title {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.footer-row4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ================ footer end ===================== */
 
 /* ================ media queries start ===================== */
 @media screen and (width <= 998px) {
@@ -416,6 +660,7 @@ body.locked {
     position: fixed;
     top: 120px;
     right: -200%;
+    z-index: 1;
     display: block;
     overflow-y: auto;
     background-color: var(--white-color);
@@ -543,6 +788,28 @@ body.locked {
 
   .site-header.isActive .lang {
     display: block;
+  }
+
+  .splide__arrows {
+    top: calc(100% + 64px);
+    right: 0;
+    bottom: initial;
+    left: initial;
+  }
+
+  .footer-row3 {
+    padding-top: 66px;
+  }
+
+  .footer-subscribe-wrapper {
+    margin-inline: auto;
+  }
+}
+
+@media screen and (width <= 520px) {
+  .footer-row4 {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 

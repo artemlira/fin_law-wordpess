@@ -193,3 +193,31 @@ window?.addEventListener("resize", () => {
     siteBody?.classList.remove("locked");
   }
 });
+
+// ========================== slider =================================
+new Splide(".splide", {
+  // perPage: 4,
+  pagination: false,
+  arrows: true,
+  grid: {
+    cols: 4,
+    rows: 1,
+    gap: {
+      row: "32px",
+      col: "32px",
+    },
+  },
+  breakpoints: {
+    998: {
+      // perPage: 1,
+      grid: {
+        rows: 2,
+        cols: 1,
+        gap: {
+          row: "32px",
+          col: "32px",
+        },
+      },
+    },
+  },
+}).mount(window.splide.Extensions);

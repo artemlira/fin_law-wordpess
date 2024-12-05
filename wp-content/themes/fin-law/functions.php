@@ -152,10 +152,15 @@ add_action('widgets_init', 'fin_law_widgets_init');
  */
 function fin_law_scripts()
 {
-  wp_enqueue_style('fin-law-style', get_stylesheet_uri(), array(), _S_VERSION);
-//  wp_style_add_data('fin-law-style', 'rtl', 'replace');
   wp_enqueue_style('stylesheet', get_template_directory_uri() . '/assets/fonts/stylesheet.min.css', array(), '1.0.0');
+//  wp_enqueue_style('splide', get_template_directory_uri() . '/assets/fonts/stylesheet.min.css', array(), '4.1.3');
+  wp_enqueue_style('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array(), '4.1.3');
+  wp_enqueue_style('fin-law-style', get_stylesheet_uri(), array(), _S_VERSION);
 //  wp_enqueue_script('fin-law-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+//  wp_enqueue_script('splide', get_template_directory_uri() . '/assets/js/splide.min.js', array(), '4.1.3', true);
+  wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array(), '4.1.4', true);
+  wp_enqueue_script('splide-grid', 'https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-grid@0.4.1/dist/js/splide-extension-grid.min.js', array(), '0.4.1', true);
+//  wp_enqueue_script('splide-grid', get_template_directory_uri() . '/assets/js/splide-extension-grid.min.js', array(), '0.4.1', true);
   wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true);
 
   if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -268,16 +273,16 @@ add_action('init', 'my_custom_init_services');
 //  return 20;
 //});
 
-//// Удаление обертки тегом з в плагине Contact Form 7
-//add_filter('wpcf7_autop_or_not', '__return_false');
-//
-//// Убрать ненужные теги у Contact Form
-//add_filter('wpcf7_form_elements', function ($content) {
-//  // Убрать обёртку в виде <span>
-////  $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
-//
-//  // Убрать атрибуты size, rows, cols
-//  $content = preg_replace('/(size|rows|cols)="\d+"/i', '', $content);
-//
-//  return $content;
-//});
+// Удаление обертки тегом з в плагине Contact Form 7
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+// Убрать ненужные теги у Contact Form
+add_filter('wpcf7_form_elements', function ($content) {
+  // Убрать обёртку в виде <span>
+//  $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+
+  // Убрать атрибуты size, rows, cols
+  $content = preg_replace('/(size|rows|cols)="\d+"/i', '', $content);
+
+  return $content;
+});
