@@ -30,19 +30,36 @@ $menus = $group['services_menu'];
   <header id="masthead" class="site-header">
     <div class="header__container">
       <div class="site-branding">
-        <a href="/">
+        <a href="<?php if (get_locale() == 'de_DE'): ?>/ <?php elseif (get_locale() == 'en_US'): ?>/en/ <?php endif; ?>">
           <span>fin</span>
-          <?php
-          $custom_logo_id = get_theme_mod('custom_logo');
-          $logo_img = '';
-          if ($custom_logo_id) {
-            $logo_img = wp_get_attachment_image($custom_logo_id, 'full', false, array(
-              'class' => 'custom-logo',
-              'itemprop' => 'logo',
-            ));
-          }
-          echo $logo_img;
-          ?>
+          <svg class="custom-logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+               viewBox="0 0 90 90"
+               fill="none">
+            <rect x="-0.00292969" width="16.3635" height="16.3635" fill="#A8D4B1"/>
+            <rect x="-0.00292969" y="24.5461" width="16.3635" height="16.3635" fill="#A8D4B1"/>
+            <rect x="-0.00292969" y="49.0923" width="16.3635" height="16.3635" fill="#A8D4B1"/>
+            <rect x="24.5439" y="49.092" width="16.3635" height="16.3635" fill="#A8D4B1"/>
+            <rect x="49.0891" y="49.092" width="16.3635" height="16.3635" fill="#A8D4B1"/>
+            <rect x="49.0891" y="24.5461" width="16.3635" height="16.3635" fill="#A8D4B1"/>
+            <rect x="49.0891" width="16.3635" height="16.3635" fill="#A8D4B1"/>
+            <rect x="73.6345" y="49.092" width="16.3635" height="16.3635" fill="#A8D4B1"/>
+            <rect x="73.6345" y="24.5461" width="16.3635" height="16.3635" fill="#A8D4B1"/>
+            <rect x="-0.00292969" y="73.6382" width="16.3635" height="16.3635" fill="#A8D4B1"/>
+            <rect x="24.5439" y="73.6382" width="16.3635" height="16.3635" fill="#A8D4B1"/>
+            <rect x="49.0891" y="73.6382" width="16.3635" height="16.3635" fill="#A8D4B1"/>
+            <rect x="73.6345" y="73.6382" width="16.3635" height="16.3635" fill="#A8D4B1"/>
+          </svg>
+          <!--          --><?php
+          //          $custom_logo_id = get_theme_mod('custom_logo');
+          //          $logo_img = '';
+          //          if ($custom_logo_id) {
+          //            $logo_img = wp_get_attachment_image($custom_logo_id, 'full', false, array(
+          //              'class' => 'custom-logo',
+          //              'itemprop' => 'logo',
+          //            ));
+          //          }
+          //          echo $logo_img;
+          //          ?>
           <span>law</span>
         </a>
       </div><!-- .site-branding -->

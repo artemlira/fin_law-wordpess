@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/main-news",
+  "title": "Main News",
+  "description": "a custom main news block that uses ACF fields",
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": [
+    "news",
+    "blog"
+  ],
+  "style": "file:./style.css",
+  "editorStyle": "file:./style.css",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

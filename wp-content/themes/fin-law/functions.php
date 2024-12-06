@@ -150,10 +150,13 @@ add_action('widgets_init', 'fin_law_widgets_init');
 /**
  * Enqueue scripts and styles.
  */
+
+
 function fin_law_scripts()
 {
+//  wp_enqueue_style('normalize', get_template_directory_uri() . '/assets/css/normalize.css', array(), '1.0.0');
   wp_enqueue_style('stylesheet', get_template_directory_uri() . '/assets/fonts/stylesheet.min.css', array(), '1.0.0');
-//  wp_enqueue_style('splide', get_template_directory_uri() . '/assets/fonts/stylesheet.min.css', array(), '4.1.3');
+//  wp_enqueue_style('main-news');
   wp_enqueue_style('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array(), '4.1.3');
   wp_enqueue_style('fin-law-style', get_stylesheet_uri(), array(), _S_VERSION);
 //  wp_enqueue_script('fin-law-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
@@ -169,6 +172,7 @@ function fin_law_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'fin_law_scripts');
+add_action('admin_enqueue_scripts', 'fin_law_scripts');
 
 /**
  * Implement the Custom Header feature.
@@ -205,10 +209,11 @@ if (function_exists('acf_add_options_page')) {
 //Register ACF Blocks
 function register_acf_blocks()
 {
-  register_block_type(__DIR__ . '/blocks/block');
+  register_block_type(__DIR__ . '/blocks/main-news');
 }
 
 add_action('init', 'register_acf_blocks');
+
 
 //Registering a new post type "Services"
 function my_custom_init_services()
@@ -269,9 +274,9 @@ function my_custom_init_services()
 add_action('init', 'my_custom_init_services');
 
 //Обрезаем длину краткого описания новостей
-//add_filter('excerpt_length', function () {
-//  return 20;
-//});
+add_filter('the_excerpt', function ($excerpt) {
+  return wp_trim_words($excerpt, 76, '...');
+});
 
 // Удаление обертки тегом з в плагине Contact Form 7
 add_filter('wpcf7_autop_or_not', '__return_false');
