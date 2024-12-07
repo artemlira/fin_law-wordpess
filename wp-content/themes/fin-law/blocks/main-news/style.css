@@ -1,3 +1,7 @@
+.main-news-section {
+  padding-top: var(--fluid-64-120);
+}
+
 .main-news-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

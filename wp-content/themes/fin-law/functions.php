@@ -172,7 +172,7 @@ function fin_law_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'fin_law_scripts');
-add_action('admin_enqueue_scripts', 'fin_law_scripts');
+//add_action('admin_enqueue_scripts', 'fin_law_scripts');
 
 /**
  * Implement the Custom Header feature.
@@ -210,9 +210,16 @@ if (function_exists('acf_add_options_page')) {
 function register_acf_blocks()
 {
   register_block_type(__DIR__ . '/blocks/main-news');
+  register_block_type(__DIR__ . '/blocks/main-accordion');
 }
 
 add_action('init', 'register_acf_blocks');
+
+add_action('enqueue_block_assets', function () {
+  wp_register_style('main-accordion', get_template_directory_uri() . '/blocks/main-accordion/style.css', array(), '1.0.0');
+  wp_register_script('main-accordion', get_template_directory_uri() . '/assets/js/main-accordion.js', false, null, true);
+
+});
 
 
 //Registering a new post type "Services"

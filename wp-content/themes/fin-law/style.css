@@ -11,6 +11,7 @@ Author URI: https://fin-law.de/
   --fluid-16-32: clamp(16px, 9px + 1.9512vw, 32px);
   --fluid-20-24: clamp(20px, 18px + 0.4878vw, 24px);
   --fluid-18-32: clamp(18px, 12px + 1.7073vw, 32px);
+  --fluid-24-32: clamp(24px, 20px + 0.9756vw, 32px);
   --fluid-32-64: clamp(32px, 17px + 3.9024vw, 64px);
   --fluid-64-120: clamp(64px, 38.0488px + 6.8293vw, 120px);
   --bg-dark: #050B15;
