@@ -1,16 +1,17 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "name": "acf/main-news",
-  "title": "Main News",
-  "description": "a custom main news block that uses ACF fields",
+  "name": "acf/main-financial-advisory",
+  "title": "Main Legacy Financial Advisory",
+  "description": "a custom main Financial Advisory block that uses ACF fields",
   "category": "formatting",
   "icon": "admin-comments",
   "keywords": [
-    "news",
-    "blog"
+    "advistory",
+    "financial"
   ],
-  "style": "main-news",
+  "style": "main-financial-advisory",
   "editorStyle": "file:./style.css",
+  "script": "main-financial-advisory",
   "acf": {
     "mode": "preview",
     "renderTemplate": "template.php"

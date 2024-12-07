@@ -1,16 +1,17 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "name": "acf/main-news",
-  "title": "Main News",
-  "description": "a custom main news block that uses ACF fields",
+  "name": "acf/main-accordion",
+  "title": "Main Accordion",
+  "description": "a custom main accordions block that uses ACF fields",
   "category": "formatting",
   "icon": "admin-comments",
   "keywords": [
-    "news",
-    "blog"
+    "accordion",
+    "tabs"
   ],
-  "style": "main-news",
+  "style": "main-accordion",
   "editorStyle": "file:./style.css",
+  "script": "main-accordion",
   "acf": {
     "mode": "preview",
     "renderTemplate": "template.php"

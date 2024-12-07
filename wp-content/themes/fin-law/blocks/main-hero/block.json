@@ -1,15 +1,14 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "name": "acf/main-news",
-  "title": "Main News",
-  "description": "a custom main news block that uses ACF fields",
+  "name": "acf/main-hero",
+  "title": "Main Hero Block",
+  "description": "a custom main hero block that uses ACF fields",
   "category": "formatting",
   "icon": "admin-comments",
   "keywords": [
-    "news",
-    "blog"
+    "hero"
   ],
-  "style": "main-news",
+  "style": "main-hero",
   "editorStyle": "file:./style.css",
   "acf": {
     "mode": "preview",
