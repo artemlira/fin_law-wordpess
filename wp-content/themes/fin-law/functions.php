@@ -154,13 +154,16 @@ add_action('widgets_init', 'fin_law_widgets_init');
 
 function fin_law_scripts()
 {
-  wp_enqueue_style('fin-law-style', get_stylesheet_uri(), array(), _S_VERSION);
+//  wp_enqueue_style('normalize', get_template_directory_uri() . '/assets/css/normalize.css', array(), '1.0.0');
   wp_enqueue_style('stylesheet', get_template_directory_uri() . '/assets/fonts/stylesheet.min.css', array(), '1.0.0');
+//  wp_enqueue_style('main-news');
   wp_enqueue_style('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array(), '4.1.3');
-  wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0');
-
+  wp_enqueue_style('fin-law-style', get_stylesheet_uri(), array(), _S_VERSION);
+//  wp_enqueue_script('fin-law-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+//  wp_enqueue_script('splide', get_template_directory_uri() . '/assets/js/splide.min.js', array(), '4.1.3', true);
   wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array(), '4.1.4', true);
   wp_enqueue_script('splide-grid', 'https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-grid@0.4.1/dist/js/splide-extension-grid.min.js', array(), '0.4.1', true);
+//  wp_enqueue_script('splide-grid', get_template_directory_uri() . '/assets/js/splide-extension-grid.min.js', array(), '0.4.1', true);
   wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true);
 
   if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -169,7 +172,7 @@ function fin_law_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'fin_law_scripts');
-//add_action('admin_enqueue_scripts', 'fin_law_scripts');
+add_action('admin_enqueue_scripts', 'fin_law_scripts');
 
 /**
  * Implement the Custom Header feature.
@@ -207,30 +210,9 @@ if (function_exists('acf_add_options_page')) {
 function register_acf_blocks()
 {
   register_block_type(__DIR__ . '/blocks/main-news');
-  register_block_type(__DIR__ . '/blocks/main-accordion');
-  register_block_type(__DIR__ . '/blocks/main-hero');
-  register_block_type(__DIR__ . '/blocks/main-financial-advisory');
 }
 
 add_action('init', 'register_acf_blocks');
-
-//Registering your own style files and scripts for ACF blocks depending on their use
-add_action('enqueue_block_assets', function () {
-  if (has_block('acf/main-hero')) {
-    wp_register_style('main-hero', get_template_directory_uri() . '/blocks/main-hero/style.css', array(), '1.0.0');
-  }
-  if (has_block('acf/main-financial-advisory')) {
-    wp_register_style('main-financial-advisory', get_template_directory_uri() . '/blocks/main-financial-advisory/style.css', array(), '1.0.0');
-    wp_register_script('main-financial-advisory', get_template_directory_uri() . '/blocks/main-financial-advisory/script.js', false, '1.0.0', true);
-  }
-  if (has_block('acf/main-accordion')) {
-    wp_register_style('main-accordion', get_template_directory_uri() . '/blocks/main-accordion/style.css', array(), '1.0.0');
-    wp_register_script('main-accordion', get_template_directory_uri() . '/blocks/main-accordion/script.js', false, '1.0.0', true);
-  }
-  if (has_block('acf/main-news')) {
-    wp_register_style('main-news', get_template_directory_uri() . '/blocks/main-news/style.css', array(), '1.0.0');
-  }
-});
 
 
 //Registering a new post type "Services"
@@ -290,64 +272,6 @@ function my_custom_init_services()
 }
 
 add_action('init', 'my_custom_init_services');
-
-//Registering a new post type "Team"
-function my_custom_init_team()
-{
-  register_taxonomy('team_rank', 'team', array(
-    'labels' => array(
-      'name' => 'Team Rank', // основное название во множественном числе
-      'singular_name' => 'Team Rank', // название единичного элемента таксономии
-      'menu_name' => 'Team Ranks', // Название в меню. По умолчанию: name.
-      'all_items' => 'Team Ranks',
-      'edit_item' => 'Edit Team Rank',
-      'view_item' => 'View Team Rank', // текст кнопки просмотра записи на сайте (если поддерживается типом)
-      'update_item' => 'Update Team Rank',
-      'add_new_item' => 'Add New Team Rank',
-      'new_item_name' => 'New Name Team Rank',
-      'search_items' => 'Search Team Ranks',
-      'popular_items' => 'Popular Team Ranks', // для таксономий без иерархий
-      'not_found' => 'Not found Team Rank',
-      'back_to_items' => '← Back to Team Ranks',
-    ),
-    'show_in_quick_edit' => true,
-    'show_admin_column' => true,
-    'has_archive' => true,
-    'hierarchical' => true,
-  ));
-
-  register_post_type('team', array(
-    'labels' => array(
-      'name' => 'Team', // Основное название типа записи
-      'singular_name' => 'Team', // отдельное название записи типа services
-      'add_new' => 'Add a Team Member',
-      'add_new_item' => 'Add a Team Member',
-      'edit_item' => 'Edit a team Member',
-      'new_item' => 'New a Team Member',
-      'view_item' => 'View a Team Member',
-      'search_items' => 'Search Team',
-      'not_found' => 'Team Members not found',
-      'not_found_in_trash' => 'Team Members not_found_in_trash',
-      'parent_item_colon' => '',
-      'menu_name' => 'Team'
-    ),
-    'public' => true,
-    'publicly_queryable' => true,
-    'show_ui' => true,
-    'show_in_menu' => true,
-    'show_in_rest' => true,
-    'query_var' => true,
-    'capability_type' => 'post',
-    'has_archive' => true,
-    'hierarchical' => true,
-    'menu_position' => 4,
-    'menu_icon' => 'dashicons-buddicons-buddypress-logo',
-    'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt'),
-//    'rewrite' => array('slug' => 'produkt', 'with_front' => false),
-  ));
-}
-
-add_action('init', 'my_custom_init_team');
 
 //Обрезаем длину краткого описания новостей
 add_filter('the_excerpt', function ($excerpt) {
