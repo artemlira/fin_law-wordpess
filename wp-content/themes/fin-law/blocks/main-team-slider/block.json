@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/main-team-slider",
+  "title": "Main Team Slider",
+  "description": "a custom main team slider block that uses ACF fields",
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": [
+    "slider",
+    "team"
+  ],
+  "style": "main-team-slider",
+  "editorStyle": "file:./style.css",
+  "script": "main-team-slider",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}
