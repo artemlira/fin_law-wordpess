@@ -1,0 +1,262 @@
+.main-team-slider-section {
+  padding-top: var(--fluid-64-120);
+  padding-bottom: var(--fluid-64-120);
+  color: var(--white-color);
+}
+
+.main-team-slider-content {
+  gap: 20px;
+}
+
+.main-team-slider {
+  padding-bottom: 120px;
+}
+
+.main-team-slider .splide__track {
+  /* padding-right: clamp(64px, -86px + 39.5122vw, 388px) !important; */
+}
+
+.main-team-slider-item {
+  display: flex;
+
+  /* flex: 0 0 9.6%; */
+  flex: 0 0 clamp(90px, 52px + 5.3061vw, 116px);
+  flex-direction: column;
+  opacity: 0.5;
+
+  /* aspect-ratio: 29 / 157; */
+}
+
+.main-team-slider-item.is-active,
+.main-team-slider-item.is-next {
+  /* flex: 0 0 32.2%; */
+
+  /* flex: 0 1 387px; */
+
+  flex: 0 0 clamp(299px, 171px + 17.9592vw, 387px);
+  opacity: 1;
+
+  /* aspect-ratio: 387 / 628; */
+}
+
+.main-team-slider-item-image-wrapper {
+  width: 100%;
+  height: clamp(360px, 128px + 32.6531vw, 520px);
+
+  /* aspect-ratio: 29 / 130; */
+
+  margin-bottom: var(--fluid-16-32);
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.main-team-slider-item-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-team-slider-item.is-active .main-team-slider-item-image-wrapper,
+.main-team-slider-item.is-next .main-team-slider-item-image-wrapper {
+  /* aspect-ratio: 387 / 520; */
+
+  height: clamp(360px, 128px + 32.6531vw, 520px);
+}
+
+.main-team-slider-category {
+  display: none;
+  max-width: 90%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  font-size: var(--fluid-16-20);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  color: var(--hover-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.main-team-slider-category:not(:first-child) {
+  margin-bottom: initial;
+}
+
+.main-team-slider-item-title {
+  display: none;
+  font-size: var(--fluid-24-32);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 38.4px */
+  color: #FFF;
+  text-decoration: none;
+}
+
+.main-team-slider-item.is-active .main-team-slider-item-title,
+.main-team-slider-item.is-next .main-team-slider-item-title,
+.main-team-slider-item.is-active .main-team-slider-category,
+.main-team-slider-item.is-next .main-team-slider-category {
+  display: block;
+}
+
+
+.main-team-slider-splide__arrows {
+  position: absolute;
+  top: initial !important;
+  bottom: 0 !important;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.main-team-slider-splide__arrow {
+  position: relative !important;
+  right: initial !important;
+  left: initial !important;
+  width: 44px !important;
+  height: 44px !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.main-team-slider-splide__arrow:disabled {
+  opacity: 0.1 !important;
+}
+
+.main-team-slider-splide__arrow svg {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+@media screen and (width <= 1024px) {
+  .main-team-slider-item {
+    flex: 0 0 clamp(64px, 33px + 8.0745vw, 116px);
+  }
+
+  .main-team-slider-item.is-next .main-team-slider-item-image-wrapper {
+    width: 100%;
+    height: clamp(360px, 128px + 32.6531vw, 520px);
+  }
+
+  .main-team-slider-item.is-next {
+    flex: 0 0 clamp(90px, 52px + 5.3061vw, 116px);
+    opacity: 0.5;
+  }
+
+  .main-team-slider-item.is-active {
+    flex: 0 0 clamp(210px, 105px + 27.4845vw, 387px);
+    opacity: 1;
+  }
+
+  .main-team-slider-item.is-next .main-team-slider-item-title,
+  .main-team-slider-item.is-next .main-team-slider-category {
+    display: none;
+  }
+
+  .main-team-slider-item.is-active .main-team-slider-item-title,
+  .main-team-slider-item.is-active .main-team-slider-category {
+    display: block;
+  }
+}
+
+@media screen and (width <= 710px) {
+  .main-team-slider-item-image-wrapper,
+  .main-team-slider-item.is-next {
+    width: 90px;
+    height: 360px;
+  }
+
+  .main-team-slider-item.is-active .main-team-slider-item-image-wrapper {
+    width: 299px;
+    height: 360px;
+  }
+}
+
+@media screen and (width <= 690px) {
+  .main-team-slider-item-image-wrapper,
+  .main-team-slider-item.is-next {
+    width: clamp(64px, 32px + 8.3871vw, 90px);
+    height: clamp(280px, 182px + 25.8065vw, 360px);
+  }
+
+  .main-team-slider-item.is-next .main-team-slider-item-image-wrapper {
+    width: clamp(64px, 32px + 8.3871vw, 90px);
+    height: clamp(280px, 182px + 25.8065vw, 360px);
+  }
+
+  .main-team-slider-item.is-active .main-team-slider-item-image-wrapper {
+    width: clamp(210px, 101px + 28.7097vw, 299px);
+    height: clamp(280px, 182px + 25.8065vw, 360px);
+  }
+}
+
+@media screen and (width <= 600px) {
+  .main-team-slider .splide__track {
+    padding-right: clamp(10px, -138px + 38.0952vw, 90px) !important;
+    padding-left: clamp(10px, -138px + 38.0952vw, 90px) !important;
+  }
+
+  .main-team-slider-item.is-next .main-team-slider-item-image-wrapper {
+    width: clamp(64px, 32px + 8.3871vw, 90px);
+    height: clamp(280px, 182px + 25.8065vw, 360px);
+  }
+
+  .main-team-slider-item.is-active .main-team-slider-item-image-wrapper {
+    width: clamp(210px, 101px + 28.7097vw, 299px);
+    height: clamp(280px, 182px + 25.8065vw, 360px);
+  }
+}
+
+@media screen and (width <= 500px) {
+  .main-team-slider-item {
+    flex: 0 0 64px;
+  }
+
+  .main-team-slider-category {
+    max-width: 210px;
+  }
+
+  .main-team-slider-item.is-next .main-team-slider-item-image-wrapper {
+    width: 64px;
+    height: clamp(280px, 182px + 25.8065vw, 360px);
+  }
+}
+
+@media screen and (width <= 400px) {
+  .main-team-slider .splide__track {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .main-team-slider-content {
+    gap: 10px;
+  }
+
+  .main-team-slider-item {
+    flex: initial;
+
+  }
+
+  .main-team-slider-item-image-wrapper {
+    flex: initial;
+    width: 64px;
+    height: 280px;
+  }
+  
+  .main-team-slider-item.is-next .main-team-slider-item-image-wrapper {
+    flex: initial;
+    width: 64px;
+    height: 280px;
+
+  }
+
+  .main-team-slider-item.is-active .main-team-slider-item-image-wrapper {
+    flex: initial;
+    width: 210px;
+    height: 280px;
+  }
+
+  .main-team-slider-item.is-active {
+    margin-inline: auto !important;
+  }
+}

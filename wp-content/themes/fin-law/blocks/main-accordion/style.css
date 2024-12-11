@@ -100,3 +100,10 @@
   content: '';
   background-color: #A7D7B0;
 }
+
+@media screen and (width <= 640px) {
+  .main-accordion-control {
+    flex-direction: column;
+    row-gap: 32px;
+  }
+}

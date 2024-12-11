@@ -34,7 +34,27 @@ $menus = $group['services_menu'];
       </a>
     </div>
     <div class="footer-row footer-row2">
-      <div class="splide">
+      <div class="footer-slider splide">
+        <div class="splide__arrows footer-splide__arrows">
+          <button class="splide__arrow splide__arrow--prev footer-splide__arrow" type="button"
+                  aria-label="Previous slide"
+                  aria-controls="splide01-track">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="44" width="44" height="44" rx="22" transform="rotate(-90 0 44)" fill="#FAFAFA"/>
+              <path d="M25 16L19 22L25 28" stroke="black" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="splide__arrow splide__arrow--next footer-splide__arrow" type="button"
+                  aria-label="Next slide"
+                  aria-controls="splide01-track">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="44" width="44" height="44" rx="22" transform="rotate(-90 0 44)" fill="white"/>
+              <path d="M19 28L25 22L19 16" stroke="black" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
         <div class="splide__track">
           <ul class="footer-services-menu-list splide__list">
             <?php if (!empty($group['services_menu'])): ?>

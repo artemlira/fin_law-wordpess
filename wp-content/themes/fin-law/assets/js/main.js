@@ -195,7 +195,7 @@ window?.addEventListener("resize", () => {
 });
 
 // ========================== slider =================================
-new Splide(".splide", {
+new Splide(".footer-slider", {
   // perPage: 4,
   pagination: false,
   arrows: true,
@@ -206,6 +206,10 @@ new Splide(".splide", {
       row: "32px",
       col: "32px",
     },
+  },
+  classes: {
+    arrows: "splide__arrows footer-splide__arrows",
+    arrow: "splide__arrow footer-splide__arrow",
   },
   breakpoints: {
     998: {

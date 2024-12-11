@@ -156,11 +156,14 @@ function fin_law_scripts()
 {
   wp_enqueue_style('fin-law-style', get_stylesheet_uri(), array(), _S_VERSION);
   wp_enqueue_style('stylesheet', get_template_directory_uri() . '/assets/fonts/stylesheet.min.css', array(), '1.0.0');
-  wp_enqueue_style('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array(), '4.1.3');
+//  wp_enqueue_style('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array(), '4.1.3');
+  wp_enqueue_style('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css', array(), '4.1.3');
+//  wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '11.1.3');
   wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.0');
 
-  wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array(), '4.1.4', true);
-  wp_enqueue_script('splide-grid', 'https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-grid@0.4.1/dist/js/splide-extension-grid.min.js', array(), '0.4.1', true);
+  wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array(), '4.1.4', false);
+  wp_enqueue_script('swiper', '', array('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'), '11.0.0', false);
+  wp_enqueue_script('splide-grid', 'https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-grid@0.4.1/dist/js/splide-extension-grid.min.js', array(), '0.4.1', false);
   wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true);
 
   if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -210,6 +213,7 @@ function register_acf_blocks()
   register_block_type(__DIR__ . '/blocks/main-accordion');
   register_block_type(__DIR__ . '/blocks/main-hero');
   register_block_type(__DIR__ . '/blocks/main-financial-advisory');
+  register_block_type(__DIR__ . '/blocks/main-team-slider');
 }
 
 add_action('init', 'register_acf_blocks');
@@ -222,6 +226,10 @@ add_action('enqueue_block_assets', function () {
   if (has_block('acf/main-financial-advisory')) {
     wp_register_style('main-financial-advisory', get_template_directory_uri() . '/blocks/main-financial-advisory/style.css', array(), '1.0.0');
     wp_register_script('main-financial-advisory', get_template_directory_uri() . '/blocks/main-financial-advisory/script.js', false, '1.0.0', true);
+  }
+  if (has_block('acf/main-team-slider')) {
+    wp_register_style('main-team-slider', get_template_directory_uri() . '/blocks/main-team-slider/style.css', array(), '1.0.0');
+    wp_register_script('main-team-slider', get_template_directory_uri() . '/blocks/main-team-slider/script.js', false, '1.0.0', true);
   }
   if (has_block('acf/main-accordion')) {
     wp_register_style('main-accordion', get_template_directory_uri() . '/blocks/main-accordion/style.css', array(), '1.0.0');
