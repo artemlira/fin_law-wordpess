@@ -6,12 +6,21 @@
   background-color: var(--white-color);
 }
 
+.main-financial-advisory-title-wrapper {
+  display: flex;
+  width: 100%;
+
+  /* overflow: hidden; */
+
+  /* animation: marquee-infinity 3s infinite linear; */
+}
+
 .main-financial-advisory-title {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: fit-content;
+  width: 300%;
   margin-inline: auto;
   margin-bottom: var(--fluid-64-120);
   font-size: var(--fluid-32-64);
@@ -20,18 +29,36 @@
   line-height: normal;
   color: var(--bg-dark);
   text-align: center;
+
+  /* width: fit-content; */
   white-space: nowrap;
+}
+
+@keyframes marquee-infinity {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .main-financial-advisory-title::before,
 .main-financial-advisory-title::after {
-  position: absolute;
-  top: 50%;
-  font-size: inherit;
-  color: inherit;
-  white-space: nowrap;
-  content: attr(data-title);
-  transform: translateY(-50%);
+  /* position: absolute; */
+
+  /* top: 50%; */
+
+  /* font-size: inherit; */
+
+  /* color: inherit; */
+
+  /* white-space: nowrap; */
+
+  /* content: attr(data-title); */
+
+  /* transform: translateY(-50%); */
 }
 
 .main-financial-advisory-title::before {
@@ -135,6 +162,11 @@
 
 .main-financial-advisory-item-button:hover {
   background-color: var(--hover-color);
+}
+
+.boxes {
+  display: flex;
+  gap: 32px;
 }
 
 @media screen and (width <= 1024px) {

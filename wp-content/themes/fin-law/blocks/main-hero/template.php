@@ -16,14 +16,14 @@ if (!empty($block['anchor'])) {
   $anchor = 'id="' . esc_attr($block['anchor']) . '" ';
 }
 // Create class attribute allowing for custom "className" and "align" values.
-$class_name = 'main-hero-section';
+$class_name = 'main-hero-section panel';
 if (!empty($block['className'])) {
   $class_name .= ' ' . $block['className'];
 }
 ?>
 
 <section <?php echo esc_attr($anchor); ?> class="<?php echo esc_attr($class_name); ?>">
-  <div class="main-hero__container main-hero-wrapper">
+  <div class="main-hero__container main-hero-wrapper outer">
     <?php if (!empty($title)): ?>
     <<?= $level_title; ?> class="main-hero-title"><?= $title ?></<?= $level_title; ?>>
   <?php endif; ?>
@@ -37,7 +37,7 @@ if (!empty($block['className'])) {
         stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M21 15.75V10.5" stroke="#A8D4B1" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
-  <p class="main-hero-scroll-text">Scroll down</p>
+  <p class="main-hero-scroll-text"><?php if (get_locale() == 'de_DE'): ?>Scrollen Sie nach unten<?php elseif (get_locale() == 'en_US'): ?>Scroll down<?php endif; ?></p>
   </div>
 </section>
 

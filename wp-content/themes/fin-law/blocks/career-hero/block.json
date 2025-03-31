@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/career-hero",
+  "title": "Career Hero Block",
+  "description": "a custom career hero block that uses ACF fields",
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": [
+    "hero"
+  ],
+  "style": "career-hero",
+  "editorStyle": "file:./style.css",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

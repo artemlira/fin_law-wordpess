@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/services-button",
+  "title": "Services Button Block",
+  "description": "a custom services button block that uses ACF fields",
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": [
+    "button"
+  ],
+  "style": "services-button",
+  "editorStyle": "file:./style.css",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

@@ -49,17 +49,6 @@ $menus = $group['services_menu'];
             <rect x="49.0891" y="73.6382" width="16.3635" height="16.3635" fill="#A8D4B1"/>
             <rect x="73.6345" y="73.6382" width="16.3635" height="16.3635" fill="#A8D4B1"/>
           </svg>
-          <!--          --><?php
-          //          $custom_logo_id = get_theme_mod('custom_logo');
-          //          $logo_img = '';
-          //          if ($custom_logo_id) {
-          //            $logo_img = wp_get_attachment_image($custom_logo_id, 'full', false, array(
-          //              'class' => 'custom-logo',
-          //              'itemprop' => 'logo',
-          //            ));
-          //          }
-          //          echo $logo_img;
-          //          ?>
           <span>law</span>
         </a>
       </div><!-- .site-branding -->

@@ -1,5 +1,6 @@
 .main-hero-section {
   height: calc(100dvh - 118px);
+  background: var(--bg-dark);
 }
 
 .main-hero-wrapper {

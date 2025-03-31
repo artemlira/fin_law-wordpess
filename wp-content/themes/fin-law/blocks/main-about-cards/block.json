@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/main-about-cards",
+  "title": "Main About  Cards Block",
+  "description": "a custom main about cards block that uses ACF fields",
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": [
+    "about",
+    "main",
+    "card"
+  ],
+  "style": "main-about-cards",
+  "editorStyle": "file:./style.css",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

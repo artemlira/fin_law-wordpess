@@ -104,6 +104,19 @@ body.locked {
   margin-inline: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  white-space: nowrap;
+  border: 0;
+}
+
 .site {
   display: flex;
   flex-direction: column;
@@ -113,6 +126,24 @@ body.locked {
 .site-main {
   flex: 1 1 auto;
 }
+
+.swipe-section .wp-block-group__inner-container {
+  /* position: relative; */
+
+  /* width: 100%; */
+
+  /* height: 100vh; */
+
+  /* overflow: hidden; */
+}
+
+/* .panel { */
+
+/*  position: absolute; */
+
+/*  inset: 0; */
+
+/* } */
 
 /* ================ header start ===================== */
 .site-header {
@@ -145,8 +176,17 @@ body.locked {
 }
 
 body.blog .site-branding span,
+body.privacy-policy .site-branding span,
 body.single-post .site-branding span,
-body.page-template-page-news .site-branding span {
+body.single-crypto_services .site-branding span,
+body.single-capital_services .site-branding span,
+body.single-it_services .site-branding span,
+body.single-gambling_services .site-branding span,
+body.page-template-page-news .site-branding span,
+body.page-template-archive-capital_services .site-branding span,
+body.page-template-archive-it_services .site-branding span,
+body.page-template-archive-gambling_services .site-branding span,
+body.page-template-archive-crypto_services .site-branding span {
   color: var(--bg-dark);
 }
 
@@ -196,13 +236,31 @@ body.page-template-page-news .site-branding span {
 }
 
 body.blog .white-color,
+body.privacy-policy .white-color,
 body.single-post .white-color,
+body.single-crypto_services .white-color,
+body.single-capital_services .white-color,
+body.single-it_services .white-color,
+body.single-gambling_services .white-color,
+body.page-template-archive-crypto_services .white-color,
+body.page-template-archive-capital_services .white-color,
+body.page-template-archive-it_services .white-color,
+body.page-template-archive-gambling_services .white-color,
 body.page-template-page-news .white-color {
   fill: var(--bg-dark);
 }
 
 body.blog .black-color,
+body.privacy-policy .black-color,
 body.single-post .black-color,
+body.single-crypto_services .black-color,
+body.single-capital_services .black-color,
+body.single-it_services .black-color,
+body.single-gambling_services .black-color,
+body.page-template-archive-crypto_services .black-color,
+body.page-template-archive-capital_services .black-color,
+body.page-template-archive-it_services .black-color,
+body.page-template-archive-gambling_services .black-color,
 body.page-template-page-news .black-color {
   stroke: var(--white-color);
 }
@@ -217,7 +275,16 @@ body.page-template-page-news .black-color {
 }
 
 body.blog .services-menu-button:hover .white-color,
+body.privacy-policy .services-menu-button:hover .white-color,
 body.single-post .services-menu-button:hover .white-color,
+body.single-crypto_services .services-menu-button:hover .white-color,
+body.single-capital_services .services-menu-button:hover .white-color,
+body.single-it_services .services-menu-button:hover .white-color,
+body.single-gambling_services .services-menu-button:hover .white-color,
+body.page-template-archive-crypto_services .services-menu-button:hover .white-color,
+body.page-template-archive-capital_services .services-menu-button:hover .white-color,
+body.page-template-archive-it_services .services-menu-button:hover .white-color,
+body.page-template-archive-gambling_services .services-menu-button:hover .white-color,
 body.page-template-page-news .services-menu-button:hover .white-color {
   fill: var(--white-color);
 }
@@ -227,13 +294,31 @@ body.page-template-page-news .services-menu-button:hover .white-color {
 }
 
 body.blog .services-menu-button:hover .black-color,
+body.privacy-policy .services-menu-button:hover .black-color,
 body.single-post .services-menu-button:hover .black-color,
+body.single-crypto_services .services-menu-button:hover .black-color,
+body.single-capital_services .services-menu-button:hover .black-color,
+body.single-it_services .services-menu-button:hover .black-color,
+body.single-gambling_services .services-menu-button:hover .black-color,
+body.page-template-archive-crypto_services .services-menu-button:hover .black-color,
+body.page-template-archive-capital_services .services-menu-button:hover .black-color,
+body.page-template-archive-it_services .services-menu-button:hover .black-color,
+body.page-template-archive-gambling_services .services-menu-button:hover .black-color,
 body.page-template-page-news .services-menu-button:hover .black-color {
   stroke: var(--bg-dark);
 }
 
 body.blog .services-menu-button,
+body.privacy-policy .services-menu-button,
 body.single-post .services-menu-button,
+body.single-crypto_services .services-menu-button,
+body.single-capital_services .services-menu-button,
+body.single-it_services .services-menu-button,
+body.single-gambling_services .services-menu-button,
+body.page-template-archive-crypto_services .services-menu-button,
+body.page-template-archive-capital_services .services-menu-button,
+body.page-template-archive-it_services .services-menu-button,
+body.page-template-archive-gambling_services .services-menu-button,
 body.page-template-page-news .services-menu-button {
   color: var(--bg-dark);
   background-color: rgb(5 11 21 / 2%);
@@ -241,7 +326,16 @@ body.page-template-page-news .services-menu-button {
 }
 
 body.blog .services-menu-button:hover,
+body.privacy-policy .services-menu-button:hover,
 body.single-post .services-menu-button:hover,
+body.single-crypto_services .services-menu-button:hover,
+body.single-capital_services .services-menu-button:hover,
+body.single-it_services .services-menu-button:hover,
+body.single-gambling_services .services-menu-button:hover,
+body.page-template-archive-crypto_services .services-menu-button:hover,
+body.page-template-archive-capital_services .services-menu-button:hover,
+body.page-template-archive-it_services .services-menu-button:hover,
+body.page-template-archive-gambling_services .services-menu-button:hover,
 body.page-template-page-news .services-menu-button:hover {
   color: var(--white-color);
   background-color: var(--bg-dark);
@@ -257,7 +351,16 @@ body.page-template-page-news .services-menu-button:hover {
 }
 
 body.single-post .main-header-menu,
+body.privacy-policy .main-header-menu,
 body.page-template-page-news .main-header-menu,
+body.single-crypto_services .main-header-menu,
+body.single-capital_services .main-header-menu,
+body.single-it_services .main-header-menu,
+body.single-gambling_services .main-header-menu,
+body.page-template-archive-crypto_services .main-header-menu,
+body.page-template-archive-capital_services .main-header-menu,
+body.page-template-archive-it_services .main-header-menu,
+body.page-template-archive-gambling_services .main-header-menu,
 body.blog .main-header-menu {
   background-color: rgb(5 11 21 / 2%);
 }
@@ -274,13 +377,31 @@ body.blog .main-header-menu {
 }
 
 body.single-post .main-header-menu li,
+body.privacy-policy .main-header-menu li,
 body.page-template-page-news .main-header-menu li,
+body.single-crypto_services .main-header-menu li,
+body.single-capital_services .main-header-menu li,
+body.single-it_services .main-header-menu li,
+body.single-gambling_services .main-header-menu li,
+body.page-template-archive-crypto_services .main-header-menu li,
+body.page-template-archive-capital_services .main-header-menu li,
+body.page-template-archive-it_services .main-header-menu li,
+body.page-template-archive-gambling_services .main-header-menu li,
 body.blog .main-header-menu li {
   color: var(--bg-dark);
 }
 
 body.single-post .main-header-menu li:hover,
+body.privacy-policy .main-header-menu li:hover,
 body.page-template-page-news .main-header-menu li:hover,
+body.single-crypto_services .main-header-menu li:hover,
+body.single-capital_services .main-header-menu li:hover,
+body.single-it_services .main-header-menu li:hover,
+body.single-gambling_services .main-header-menu li:hover,
+body.page-template-archive-crypto_services .main-header-menu li:hover,
+body.page-template-archive-capital_services .main-header-menu li:hover,
+body.page-template-archive-it_services .main-header-menu li:hover,
+body.page-template-archive-gambling_services .main-header-menu li:hover,
 body.blog .main-header-menu li:hover {
   color: var(--white-color);
   background-color: var(--bg-dark);
@@ -396,6 +517,17 @@ body.blog .main-header-menu li:hover {
   border-radius: 78px;
 }
 
+.crypto_services-item a {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: clamp(18px, 15px + 0.7407vw, 24px);
+  text-decoration: none;
+}
+
 .lang-item:hover > a {
   color: var(--hover-color);
 }
@@ -412,7 +544,16 @@ body.blog .main-header-menu li:hover {
 }
 
 body.blog .pll-parent-menu-item a,
+body.privacy-policy .pll-parent-menu-item a,
 body.single-post .pll-parent-menu-item a,
+body.single-crypto_services .pll-parent-menu-item a,
+body.single-capital_services .pll-parent-menu-item a,
+body.single-it_services .pll-parent-menu-item a,
+body.single-gambling_services .pll-parent-menu-item a,
+body.page-template-archive-crypto_services .pll-parent-menu-item a,
+body.page-template-archive-capital_services .pll-parent-menu-item a,
+body.page-template-archive-it_services .pll-parent-menu-item a,
+body.page-template-archive-gambling_services .pll-parent-menu-item a,
 body.page-template-page-news .pll-parent-menu-item a {
   color: var(--bg-dark);
 }
@@ -496,6 +637,15 @@ body.page-template-page-news .pll-parent-menu-item a {
 }
 
 body.single-post .pll-parent-menu-item .sub-menu a,
+body.privacy-policy .pll-parent-menu-item .sub-menu a,
+body.single-crypto_services .pll-parent-menu-item .sub-menu a,
+body.single-capital_services .pll-parent-menu-item .sub-menu a,
+body.single-it_services .pll-parent-menu-item .sub-menu a,
+body.single-gambling_services .pll-parent-menu-item .sub-menu a,
+body.page-template-archive-crypto_services .pll-parent-menu-item .sub-menu a,
+body.page-template-archive-capital_services .pll-parent-menu-item .sub-menu a,
+body.page-template-archive-it_services .pll-parent-menu-item .sub-menu a,
+body.page-template-archive-gambling_services .pll-parent-menu-item .sub-menu a,
 body.page-template-page-news .pll-parent-menu-item .sub-menu a,
 body.blog .pll-parent-menu-item .sub-menu a {
   color: var(--white-color);
@@ -547,19 +697,15 @@ body.blog .pll-parent-menu-item .sub-menu a {
 
 .site-footer .splide__arrow {
   position: relative;
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   background-color: var(--white-color);
+  border-radius: 50%;
   opacity: 1;
 }
 
 .site-footer .splide__arrow[disabled] {
   opacity: 0.1;
-}
-
-.site-footer .splide__arrow svg {
-  width: 24px;
-  height: 24px;
 }
 
 .site-footer .splide__slide__row {
@@ -767,6 +913,7 @@ body.blog .pll-parent-menu-item .sub-menu a {
 
 .entry-header-content ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   list-style: none;
 }
@@ -787,7 +934,7 @@ body:has(.post) .site-header {
 .entry-content__container {
   display: grid;
   grid-template-columns: 1fr 353px;
-  column-gap: clamp(64px, 39px + 6.5854vw, 118px);
+  column-gap: clamp(16px, -33px + 12.5926vw, 118px);
 }
 
 
@@ -795,12 +942,30 @@ body:has(.post) .site-header {
 
 /* ================ blog page start ===================== */
 .blog,
-.page-template-page-news {
+.privacy-policy,
+.page-template-page-news,
+.page-template-archive-crypto_services,
+.page-template-archive-capital_services,
+.page-template-archive-it_services,
+.page-template-archive-gambling_services,
+.single-capital_services,
+.single-it_services,
+.single-gambling_services,
+.single-crypto_services {
   color: var(--bg-dark);
   background-color: var(--white-color);
 }
 
 body.blog footer,
+body.privacy-policy footer,
+body.page-template-archive-crypto_services footer,
+body.page-template-archive-capital_services footer,
+body.page-template-archive-it_services footer,
+body.page-template-archive-gambling_services footer,
+body.single-crypto_services footer,
+body.single-capital_services footer,
+body.single-it_services footer,
+body.single-gambling_services footer,
 body.page-template-page-news footer {
   background-color: var(--bg-dark);
 }
@@ -824,6 +989,15 @@ body.page-template-page-news footer {
   height: 384px;
   overflow: hidden;
   border-radius: 24px;
+}
+
+.single-post-news-item-image-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card-news-item-image-wrapper img {
@@ -911,11 +1085,22 @@ body.page-template-page-news footer {
   transition-duration: 0.3s;
 }
 
+.section-search-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section-search-item-title {
+  color: var(--white-color);
+}
+
 .section-blog-item-title {
   color: var(--bg-dark);
 }
 
-.section-blog-item-title:hover {
+.section-blog-item-title:hover,
+.section-search-item-title:hover {
   color: var(--hover-color);
 }
 
@@ -1029,7 +1214,6 @@ body.page-template-page-news footer {
 
 /* ================ single-team page start ===================== */
 .single-team {
-  padding-top: var(--fluid-24-64);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='868' height='1208' viewBox='0 0 868 1208' fill='none'%3E%3Cg filter='url(%23filter0_f_4061_1692)'%3E%3Ccircle cx='264' cy='604' r='104' fill='%231FD662'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_4061_1692' x='-340' y='0' width='1208' height='1208' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='250' result='effect1_foregroundBlur_4061_1692'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
   background-repeat: no-repeat;
 }
@@ -1038,6 +1222,7 @@ body.page-template-page-news footer {
   display: flex;
   gap: 20px;
   max-height: 520px;
+  padding-top: var(--fluid-24-64);
 }
 
 .single-team-image-wrapper {
@@ -1130,6 +1315,581 @@ body.page-template-page-news footer {
 
 /* ================ single-team page end ===================== */
 
+/* ================ single-post page start ===================== */
+.single-post-subscribe {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: fit-content;
+  padding: 6px 6px 6px 24px;
+  margin-top: clamp(24px, 9px + 3.9506vw, 56px);
+  color: var(--white-color);
+  text-decoration: none;
+  background-color: var(--bg-dark);
+  border-radius: 100px;
+  transition-duration: 0.3s;
+}
+
+.single-post-subscribe:hover {
+  background-color: var(--hover-color);
+}
+
+.single-post .single-post-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--fluid-18-32);
+  padding-top: var(--fluid-18-32);
+  padding-bottom: 10px;
+  background: url("../images/Finlaw_Favicon.webp") top right / 90px 90px no-repeat, #FAFAFA;
+  border-radius: 24px 0 24px 24px;
+}
+
+.post-contact-title {
+  padding-left: var(--fluid-18-32);
+  font-size: var(--fluid-24-32);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 38.4px */
+  color: var(--bg-dark);
+}
+
+.post-contact-text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-left: var(--fluid-18-32);
+}
+
+.post-contact-form-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--fluid-16-32);
+  padding-inline: var(--fluid-18-32);
+}
+
+.post-contact-form-content label {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgb(5 11 21 / 25%);
+}
+
+.post-contact-form-content input {
+  width: 100%;
+  padding: 16px 24px;
+  font-family: Outfit, sans-serif;
+  font-size: var(--fluid-16-20);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  color: var(--bg-dark);
+  background-color: #fafafa;
+}
+
+.post-contact-form-content input::placeholder {
+  font-family: Outfit, sans-serif;
+  font-size: var(--fluid-16-20);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  color: var(--bg-dark);
+}
+
+.post-contact-form-content .wpcf7-acceptance .wpcf7-list-item label {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.post-contact-form-content .wpcf7-acceptance .wpcf7-list-item .wpcf7-list-item-label {
+  font-family: Outfit, sans-serif;
+  font-size: var(--fluid-16-20);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  color: var(--bg-dark);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.post-contact-submit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 6px 4px 24px;
+  margin-inline: 10px;
+  color: var(--white-color);
+  background-color: var(--bg-dark);
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 100px;
+  transition-duration: 0.3s;
+}
+
+.post-contact-submit:hover {
+  background-color: var(--hover-color);
+}
+
+.single-post-news__container {
+  padding-top: var(--fluid-32-64);
+  padding-bottom: 64px;
+}
+
+.single-post-news-item-image-wrapper {
+  width: clamp(285px, 237px + 12.2222vw, 384px);
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.single-post-news-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.single-post-news-item-title {
+  overflow: hidden;
+  font-size: var(--fluid-20-24);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 24px */
+  color: var(--bg-dark);
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}
+
+.single-post-news-splide__arrows {
+  position: absolute;
+  right: 10px;
+  bottom: 64px;
+  display: none;
+  gap: 16px;
+}
+
+@media screen and (width >= 768px) {
+  .single-post-news-content {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .single-post-news-item {
+    flex: 1 1 30%;
+    max-width: 384px;
+  }
+
+  .single-post-news-item-title {
+    flex: 1 1 auto;
+  }
+}
+
+
+/* ================ single-post page end ===================== */
+
+/* ================ crypto assets page start ===================== */
+.crypto_services-header {
+  margin-top: var(--fluid-32-64);
+  margin-bottom: var(--fluid-32-64);
+}
+
+.crypto_services-title {
+  font-size: var(--fluid-24-64);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #050B15;
+}
+
+.crypto_services-content-wrapper {
+  padding-bottom: clamp(60px, 37px + 5.9259vw, 108px);
+}
+
+.crypto_services-item {
+  display: grid;
+  place-items: center;
+  background-color: rgb(6 11 23 / 2%);
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 24px;
+  transition-duration: 0.3s;
+}
+
+.crypto_services-item:hover {
+  background-color: var(--hover-color);
+}
+
+.crypto_services-item-title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 28.8px */
+  color: var(--bg-dark);
+  text-transform: capitalize;
+}
+
+.crypto_services-item-icon {
+  flex: 0 0 44px;
+  aspect-ratio: 1 / 1;
+}
+
+.page-template-archive-crypto_services .main-accordion-section {
+  padding-top: var(--fluid-32-64);
+  padding-bottom: clamp(16px, -7px + 5.9259vw, 64px);
+}
+
+.crypto_services-splide__arrows {
+  position: absolute;
+  bottom: 0;
+  left: 32px;
+  display: flex;
+  gap: 16px;
+}
+
+.crypto_services-splide__arrow[disabled] {
+  opacity: 0.1;
+}
+
+/* ================ crypto_services page end ===================== */
+
+/* ================ single-crypto_services page start ===================== */
+.single-crypto_services-header {
+  margin-top: var(--fluid-24-64);
+  margin-bottom: var(--fluid-32-64);
+}
+
+.single-crypto_services-title {
+  font-size: var(--fluid-24-64);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--bg-dark);
+}
+
+.single-crypto_services-image-wrapper {
+  width: 100%;
+  height: 240px;
+  margin-bottom: var(--fluid-32-64);
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.single-crypto_services-image-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.single-crypto_services-content {
+  display: grid;
+  grid-template-columns: 353px auto;
+  column-gap: clamp(0px, -118px + 19.6667vw, 118px);
+}
+
+.single-crypto_services-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 7px + 0.7407vw, 16px);
+  height: fit-content;
+  padding: var(--fluid-18-32);
+  list-style: none;
+  background: #FAFAFA;
+  border-radius: 24px;
+}
+
+.single-crypto_services-item {
+  transition-duration: 0.3s;
+}
+
+.single-crypto_services-item:hover {
+  background-color: var(--hover-color);
+}
+
+.single-crypto_services-item-link {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--fluid-16-20);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  color: var(--bg-dark);
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.single-crypto_services-item-icon {
+  display: grid;
+  flex: 0 0 44px;
+  place-items: center;
+  aspect-ratio: 1 / 1;
+  transition-duration: 0.3s;
+}
+
+.single-crypto_services-item:hover .single-crypto_services-item-icon path {
+  stroke: var(--white-color);
+}
+
+/* ================ single-crypto_services page end ===================== */
+
+/* ================ contact page start ===================== */
+.contact-page-title {
+  margin-top: var(--fluid-32-64);
+  margin-bottom: var(--fluid-32-64);
+  font-size: var(--fluid-24-64);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--white-color);
+}
+
+.contact-page-content {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  margin-bottom: var(--fluid-32-64);
+}
+
+.contact-page-contacts {
+  display: flex;
+  flex: 0 1 503px;
+  flex-direction: column;
+  row-gap: var(--fluid-18-32);
+}
+
+.contact-page-phone, .contact-page-email {
+  font-size: clamp(20px, 14px + 1.4815vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 38.4px */
+  color: var(--white-color);
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.contact-page-line {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255 255 255 / 10%);
+}
+
+.contact-page-address {
+  font-size: var(--fluid-16-20);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  color: var(--white-color);
+}
+
+.contact-page-map {
+  flex: 0 1 588px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.contact-page-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--fluid-18-32);
+  padding-block: clamp(18px, -4px + 5.679vw, 64px);
+  padding-inline: clamp(18px, -89px + 27.4074vw, 240px);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='127' height='126' viewBox='0 0 127 126' fill='none'%3E%3Crect x='0.5' width='22.9088' height='22.9088' fill='%23050B15'/%3E%3Crect x='0.5' y='34.3647' width='22.9088' height='22.9088' fill='%23050B15'/%3E%3Crect x='0.5' y='68.7295' width='22.9088' height='22.9088' fill='%23050B15'/%3E%3Crect x='34.8672' y='68.729' width='22.9088' height='22.9088' fill='%23050B15'/%3E%3Crect x='69.2285' y='68.729' width='22.9088' height='22.9088' fill='%23050B15'/%3E%3Crect x='69.2285' y='34.3647' width='22.9088' height='22.9088' fill='%23050B15'/%3E%3Crect x='69.2285' width='22.9088' height='22.9088' fill='%23050B15'/%3E%3Crect x='103.594' y='68.729' width='22.9088' height='22.9088' fill='%23050B15'/%3E%3Crect x='103.594' y='34.3647' width='22.9088' height='22.9088' fill='%23050B15'/%3E%3Crect x='0.5' y='103.094' width='22.9088' height='22.9088' fill='%23050B15'/%3E%3Crect x='34.8672' y='103.094' width='22.9088' height='22.9088' fill='%23050B15'/%3E%3Crect x='69.2285' y='103.094' width='22.9088' height='22.9088' fill='%23050B15'/%3E%3Crect x='103.594' y='103.094' width='22.9088' height='22.9088' fill='%23050B15'/%3E%3C/svg%3E") no-repeat top right / clamp(65px, 36px + 7.5309vw, 126px) clamp(65px, 36px + 7.5309vw, 126px), var(--white-color);
+  border-radius: 24px 0 24px 24px;
+}
+
+.contact-page-form-title {
+  font-size: var(--fluid-24-32);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 38.4px */
+  color: var(--bg-dark);
+}
+
+.contact-page-form-content {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
+  row-gap: var(--fluid-16-32);
+}
+
+.contact-page-form-name input,
+.contact-page-form-last-name input,
+.contact-page-form-email input,
+.contact-page-form-message input {
+  width: 100%;
+  padding: 16px 24px;
+  font-family: Outfit, sans-serif;
+  font-size: var(--fluid-16-20);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  color: var(--bg-dark);
+  border-bottom: 1px solid rgb(5 11 21 / 10%);
+
+  &::placeholder {
+    font-family: Outfit, sans-serif;
+    font-size: var(--fluid-16-20);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 28px */
+    color: var(--bg-dark);
+  }
+}
+
+
+.contact-page-form-name {
+  margin-right: 16px;
+}
+
+.contact-page-form-name,
+.contact-page-form-last-name {
+  grid-column: span 1;
+}
+
+.contact-page-form-email,
+.contact-page-form-message {
+  grid-column: span 2;
+}
+
+.contact-page-form-wrapper .wpcf7-acceptance .wpcf7-list-item label {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-page-form-wrapper .wpcf7-list-item-label {
+  font-family: Outfit, sans-serif;
+  font-size: var(--fluid-16-20);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  color: var(--bg-dark);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.contact-page-submit {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  padding: 6px 6px 6px 24px;
+  background-color: var(--bg-dark);
+  border-radius: 100px;
+  transition-duration: 0.3s;
+}
+
+.contact-page-submit:hover {
+  background-color: var(--hover-color);
+}
+
+/* ================ contact page end ===================== */
+
+/* ================ error-404 page start ===================== */
+.error-404 {
+  display: grid;
+  place-content: center;
+  height: calc(100vh - 150px);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1058' height='1208' viewBox='0 0 1058 1208' fill='none'%3E%3Cg filter='url(%23filter0_f_4061_2120)'%3E%3Ccircle cx='454' cy='604' r='104' fill='%231FD662'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_4061_2120' x='-150' y='0' width='1208' height='1208' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='250' result='effect1_foregroundBlur_4061_2120'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E") no-repeat;
+}
+
+.error-404-title {
+  display: flex;
+  gap: clamp(10px, 4px + 1.4815vw, 22px);
+  align-items: center;
+  justify-content: center;
+  height: clamp(82px, 34px + 12.3457vw, 182px);
+  margin-bottom: var(--fluid-32-64);
+}
+
+.error-404-title-logo {
+  width: clamp(82px, 34px + 12.3457vw, 182px);
+  aspect-ratio: 1 / 1;
+}
+
+.error-404-title span {
+  font-size: clamp(120px, 48px + 18.5185vw, 270px);
+}
+
+.error-404-subtitle {
+  margin-bottom: 16px;
+  font-size: var(--fluid-24-32);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 38.4px */
+  color: var(--white-color);
+  text-align: center;
+}
+
+.error-404-text {
+  font-size: var(--fluid-16-20);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  color: var(--white-color);
+  text-align: center;
+}
+
+.error-404-link {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  padding: 6px 6px 6px 24px;
+  margin-inline: auto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  color: var(--white-color);
+  text-decoration: none;
+  background-color: rgb(255 255 255 / 5%);
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 100px;
+  transition-duration: 0.3s;
+}
+
+.error-404-link:hover {
+  background-color: var(--hover-color);
+}
+
+/* ================ error-404 page end ===================== */
+
+/* ================ Privacy Policy page start ===================== */
+
+
+.privacy-policy-wrapper {
+  max-width: 730px;
+  padding-top: var(--fluid-24-64);
+  padding-bottom: var(--fluid-64-120);
+  margin-inline: auto;
+}
+
+.privacy-policy-header {
+  margin-bottom: var(--fluid-32-64);
+}
+
+.privacy-policy-header-title {
+  font-size: var(--fluid-24-64);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* ================ Privacy Policy page end ===================== */
+
 /* ================ media queries start ===================== */
 @media screen and (width <= 1290px) {
   .section-blog-list {
@@ -1153,7 +1913,16 @@ body.page-template-page-news footer {
   }
 
   body.blog .burger-menu-button,
+  body.privacy-policy .burger-menu-button,
   body.page-template-page-news .burger-menu-button,
+  body.single-crypto_services .burger-menu-button,
+  body.single-capital_services .burger-menu-button,
+  body.single-it_services .burger-menu-button,
+  body.single-gambling_services .burger-menu-button,
+  body.page-template-archive-crypto_services .burger-menu-button,
+  body.page-template-archive-capital_services .burger-menu-button,
+  body.page-template-archive-it_services .burger-menu-button,
+  body.page-template-archive-gambling_services .burger-menu-button,
   body.single-post .burger-menu-button {
     background-color: var(--bg-dark);
   }
@@ -1172,7 +1941,16 @@ body.page-template-page-news footer {
   }
 
   body.blog .burger-menu-button span,
+  body.privacy-policy .burger-menu-button span,
   body.page-template-page-news .burger-menu-button span,
+  body.single-crypto_services .burger-menu-button span,
+  body.single-capital_services .burger-menu-button span,
+  body.single-it_services .burger-menu-button span,
+  body.single-gambling_services .burger-menu-button span,
+  body.page-template-archive-crypto_services .burger-menu-button span,
+  body.page-template-archive-capital_services .burger-menu-button span,
+  body.page-template-archive-it_services .burger-menu-button span,
+  body.page-template-archive-gambling_services .burger-menu-button span,
   body.single-post .burger-menu-button span {
     background-color: var(--white-color);
   }
@@ -1346,6 +2124,29 @@ body.page-template-page-news footer {
   .footer-subscribe-wrapper {
     margin-inline: auto;
   }
+
+  .entry-header__container {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .entry-content__container {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+
+  .contact-page-content {
+    flex-direction: column;
+  }
+
+  .contact-page-contacts {
+    flex: 1 1 auto;
+  }
+
+  .contact-page-map {
+    flex: 1 1 auto;
+    max-height: 312px;
+  }
 }
 
 @media screen and (width <= 870px) {
@@ -1386,11 +2187,44 @@ body.page-template-page-news footer {
   }
 }
 
+@media screen and (width <= 768px) {
+  .single-post-news__container {
+    padding-bottom: 140px;
+  }
+
+  .single-post-news-splide__arrows {
+    display: flex;
+  }
+
+  .single-crypto_services-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .single-crypto_services-list {
+    margin-bottom: 64px;
+  }
+
+  .contact-page-form-name,
+  .contact-page-form-last-name {
+    grid-column: span 2;
+  }
+}
+
 @media screen and (width <= 600px) {
   .section-blog-header__container {
     flex-direction: column;
     row-gap: 26px;
     align-items: start;
+  }
+
+  .crypto_services-splide__arrows {
+    right: 0;
+    left: initial;
+  }
+
+  .contact-page-submit {
+    width: 100%;
   }
 }
 
@@ -1411,6 +2245,17 @@ body.page-template-page-news footer {
   }
 
   .single-team-image-wrapper {
+    width: 100%;
+  }
+
+  .single-post-subscribe {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media screen and (width <= 390px) {
+  .single-post-news-item-image-wrapper {
     width: 100%;
   }
 }

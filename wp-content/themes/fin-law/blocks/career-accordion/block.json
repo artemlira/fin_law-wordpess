@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/career-accordion",
+  "title": "Career Accordion",
+  "description": "a custom career accordions block that uses ACF fields",
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": [
+    "accordion",
+    "tabs",
+    "career"
+  ],
+  "style": "career-accordion",
+  "editorStyle": "file:./style.css",
+  "script": "career-accordion",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}
